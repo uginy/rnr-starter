@@ -1,0 +1,73 @@
+{
+  "name": "React Native UI Boilerplate",
+  "description": "A comprehensive React Native Expo boilerplate with 50+ modern UI components, dark/light themes, i18n, state management, and production-ready architecture",
+  "version": "1.0.0",
+  "author": "Uginy",
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "expo",
+    "ui-components",
+    "boilerplate",
+    "starter",
+    "typescript",
+    "nativewind",
+    "tailwind",
+    "dark-theme",
+    "light-theme",
+    "i18n",
+    "internationalization",
+    "state-management",
+    "zustand",
+    "react-query",
+    "bottom-sheet",
+    "toast",
+    "shadcn-ui",
+    "rn-primitives",
+    "cross-platform",
+    "ios",
+    "android",
+    "web"
+  ],
+  "features": [
+    "50+ Modern UI Components (Buttons, Cards, Forms, Tables, etc.)",
+    "Dark & Light Theme Support with System Preference Detection",
+    "Cross-platform Bottom Sheets with Native Feel",
+    "Internationalization (i18n) with English & Russian Support",
+    "Toast Notifications with Auto Error Handling",
+    "State Management with Zustand",
+    "API Integration with React Query & Axios",
+    "Form Validation with React Hook Form & Zod",
+    "Data Tables with Sorting, Filtering & Pagination",
+    "TypeScript Configuration with Strict Mode",
+    "NativeWind v4 (Tailwind CSS for React Native)",
+    "Expo Router for File-based Navigation",
+    "Biome for Lightning-fast Linting & Formatting",
+    "MMKV for High-performance Storage",
+    "Production-ready Build Configurations",
+    "Cross-platform Support (iOS, Android, Web)",
+    "Accessible Components with Screen Reader Support",
+    "Responsive Design Patterns",
+    "Custom Icon Library with Lucide Icons",
+    "Avatar Upload with Image Picker Integration"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/react-native-ui-boilerplate"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/react-native-ui-boilerplate/issues"
+  },
+  "homepage": "https://github.com/your-username/react-native-ui-boilerplate#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "expo": {
+    "sdkVersion": "53.0.0"
+  },
+  "dependencies": {
+    "expo": "^53.0.9",
+    "react": "19.0.0",
+    "react-native": "0.79.2"
+  }
+}

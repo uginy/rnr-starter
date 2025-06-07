@@ -1,0 +1,91 @@
+{
+  "navigation": {
+    "title": "Starter Base"
+  },
+  "profile": {
+    "name": "Rick Sanchez",
+    "occupation": "Scientist",
+    "occupationTooltip": "Freelance",
+    "stats": {
+      "dimension": "Dimension",
+      "age": "Age",
+      "species": "Species"
+    },
+    "productivity": "Productivity:",
+    "updateButton": "Update"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "toggle": "Toggle language",
+    "current": "EN"
+  },
+  "auth": {
+    "signInWithGoogle": "Sign in with Google",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as",
+    "signingIn": "Signing in...",
+    "signingOut": "Signing out...",
+    "signInSuccess": "Successfully signed in!",
+    "signOutSuccess": "Successfully signed out",
+    "loginSuccess": "Successfully logged in!",
+    "registerSuccess": "Account created successfully!",
+    "errors": {
+      "signInFailed": "Sign in failed",
+      "signOutFailed": "Sign out failed",
+      "authInitFailed": "Authentication initialization failed",
+      "cancelled": "Authentication was cancelled",
+      "networkError": "Network error. Please check your connection.",
+      "unknown": "An unknown error occurred"
+    }
+  },
+  "toast": {
+    "success": {
+      "default": "Success!",
+      "saved": "Successfully saved",
+      "deleted": "Successfully deleted",
+      "updated": "Successfully updated",
+      "created": "Successfully created"
+    },
+    "error": {
+      "default": "Something went wrong",
+      "network": "Network error. Please check your connection.",
+      "validation": "Please check your input",
+      "unknown": "An unknown error occurred"
+    },
+    "info": {
+      "default": "Information",
+      "update": "Update available",
+      "maintenance": "System maintenance scheduled"
+    },
+    "warning": {
+      "default": "Warning",
+      "storage": "Storage space is running low",
+      "session": "Your session will expire soon"
+    },
+    "loading": {
+      "default": "Loading...",
+      "saving": "Saving...",
+      "uploading": "Uploading...",
+      "processing": "Processing..."
+    }
+  },
+  "api": {
+    "errors": {
+      "400": "Bad request. Please check your input.",
+      "401": "Unauthorized. Please sign in again.",
+      "403": "Access denied. You don't have permission.",
+      "404": "Resource not found.",
+      "408": "Request timeout. Please try again.",
+      "429": "Too many requests. Please wait a moment.",
+      "500": "Server error. Please try again later.",
+      "502": "Service temporarily unavailable.",
+      "503": "Service unavailable. Please try again later.",
+      "network": "Network error. Please check your connection.",
+      "client": "Request failed. Please check your input.",
+      "server": "Server error. Please try again later.",
+      "unknown": "An unexpected error occurred."
+    }
+  }
+}

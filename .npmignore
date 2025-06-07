@@ -1,0 +1,81 @@
+# Development files
+.DS_Store
+*.log
+.env
+.env.local
+.env.production
+.env.staging
+
+# Build outputs
+.expo/
+dist/
+build/
+web-build/
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Platform builds
+ios/
+android/
+
+# Cache
+.cache/
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Version control
+.git/
+
+# Testing
+coverage/
+.nyc_output/
+junit.xml
+
+# Documentation build
+docs/build/
+docs/.docusaurus/
+
+# Miscellaneous
+*.tgz
+*.tar.gz
+*.zip
+.eslintcache
+
+# Development scripts and docs
+docs/
+example-projects/
+scripts/
+create-local-project.js
+README_LOCAL_USAGE.md
+LOCAL_USAGE_QUICK_START.md
+test-local-tools.sh
+test-template.sh
+.template-ignore
+
+# Template specific docs
+BOILERPLATE_CLEANUP_CHECKLIST.md
+TEMPLATE_PUBLICATION_GUIDE.md
+TEMPLATE_PUBLICATION_PLAN.md
+TEMPLATE_TESTING_GUIDE.md
+FINAL_READINESS_REPORT.md
+
+# EAS Build secrets
+*.p8
+*.p12
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist
+
+# Metro
+.metro-health-check*

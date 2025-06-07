@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+bun.lockb
+package-lock.json
+yarn.lock
+
+# Version control
+.git/
+.gitignore
+
+# Environment files (keep only example)
+.env
+.env.local
+.env.production
+.env.staging
+
+# Build outputs
+dist/
+build/
+.expo/
+.next/
+out/
+
+# Platform specific builds
+ios/
+android/
+web-build/
+
+# Cache and temporary files
+.cache/
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+.nyc_output/
+junit.xml
+
+# Documentation build
+docs/build/
+docs/.docusaurus/
+
+# Miscellaneous
+*.tgz
+*.tar.gz
+*.zip
+.eslintcache
+
+# Development files
+BOILERPLATE_CLEANUP_CHECKLIST.md
+
+# EAS Build
+*.p8
+*.p12
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist
+
+# Metro
+.metro-health-check*
