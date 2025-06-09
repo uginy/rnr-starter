@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
 import { Text } from '~/components/ui/text';
+import { useAppStore } from '~/lib/stores/app-store';
 
 export function LanguageToggle() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { language, setLanguage } = useAppStore();
 
   function toggleLanguage() {
-    const newLanguage = i18n.language === 'en' ? 'ru' : 'en';
-    i18n.changeLanguage(newLanguage);
+    const newLanguage = language === 'en' ? 'ru' : 'en';
+    setLanguage(newLanguage);
   }
 
   return (

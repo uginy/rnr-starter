@@ -16,6 +16,7 @@ import { ToastProvider } from '~/lib/toast';
 import { useColorScheme } from '~/lib/useColorScheme';
 import '~/lib/i18n';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { InitializationProvider } from '~/lib/providers/InitializationProvider';
 
 const LIGHT_THEME: Theme = {
   ...DefaultTheme,
@@ -50,31 +51,33 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <ProviderWrapper>
-        <ToastProvider enableErrorInterceptor>
-          <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-            <SafeAreaView style={{ flex: 1 }}>
-              <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
-              <Stack>
-                <Stack.Screen
-                  name="index"
-                  options={{
-                    headerShown: true,
-                    title: t('navigation.title'),
-                    headerRight: () => (
-                      <View className="gap-4 flex flex-row">
-                        <LanguageToggle />
-                        <ThemeToggle />
-                      </View>
-                    ),
-                  }}
-                />
-              </Stack>
-            </SafeAreaView>
-            <PortalHost />
-          </ThemeProvider>
-        </ToastProvider>
-      </ProviderWrapper>
+      <InitializationProvider>
+        <ProviderWrapper>
+          <ToastProvider enableErrorInterceptor>
+            <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+              <SafeAreaView style={{ flex: 1 }}>
+                <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
+                <Stack>
+                  <Stack.Screen
+                    name="index"
+                    options={{
+                      headerShown: true,
+                      title: t('navigation.title'),
+                      headerRight: () => (
+                        <View className="gap-4 flex flex-row">
+                          <LanguageToggle />
+                          <ThemeToggle />
+                        </View>
+                      ),
+                    }}
+                  />
+                </Stack>
+              </SafeAreaView>
+              <PortalHost />
+            </ThemeProvider>
+          </ToastProvider>
+        </ProviderWrapper>
+      </InitializationProvider>
     </GestureHandlerRootView>
   );
 }

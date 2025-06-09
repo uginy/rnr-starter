@@ -1,19 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
-import { setAndroidNavigationBar } from '~/lib/android-navigation-bar';
 import { MoonStar } from '~/lib/icons/MoonStar';
 import { Sun } from '~/lib/icons/Sun';
 import { useColorScheme } from '~/lib/useColorScheme';
 
 export function ThemeToggle() {
-  const { isDarkColorScheme, setColorScheme } = useColorScheme();
+  const { isDarkColorScheme, toggleColorScheme } = useColorScheme();
   const { t } = useTranslation();
-
-  function toggleColorScheme() {
-    const newTheme = isDarkColorScheme ? 'light' : 'dark';
-    setColorScheme(newTheme);
-    setAndroidNavigationBar(newTheme);
-  }
 
   return (
     <Pressable

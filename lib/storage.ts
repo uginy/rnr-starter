@@ -135,6 +135,8 @@ export const STORAGE_KEYS = {
   // App settings
   THEME: 'theme',
   LANGUAGE: 'language',
+  APP_THEME: 'app_theme',
+  APP_LANGUAGE: 'app_language',
   FIRST_LAUNCH: 'first_launch',
 
   // Cache

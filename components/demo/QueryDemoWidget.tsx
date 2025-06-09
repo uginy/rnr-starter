@@ -70,12 +70,12 @@ export function QueryDemoWidget() {
           <View className="flex-row flex-wrap gap-1">
             {post.tags.slice(0, 2).map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
+                <Text>{tag}</Text>
               </Badge>
             ))}
             {post.tags.length > 2 && (
               <Badge variant="outline" className="text-xs">
-                +{post.tags.length - 2}
+                <Text>+{post.tags.length - 2}</Text>
               </Badge>
             )}
           </View>
