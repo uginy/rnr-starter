@@ -6,6 +6,7 @@
 [![Expo](https://img.shields.io/badge/Expo-53.0-000020?style=flat-square&logo=expo)](https://expo.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![NativeWind](https://img.shields.io/badge/NativeWind-4.1-06b6d4?style=flat-square)](https://www.nativewind.dev/)
+[![npm version](https://img.shields.io/npm/v/rnr-starter?style=flat-square&logo=npm)](https://www.npmjs.com/package/rnr-starter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 A comprehensive React Native Expo boilerplate with **50+ modern UI components**, dark/light themes, internationalization, and production-ready architecture.
@@ -13,6 +14,19 @@ A comprehensive React Native Expo boilerplate with **50+ modern UI components**,
 [**View Demo**](#-screenshots) • [**Getting Started**](#-quick-start) • [**Components**](#-ui-components) • [**Features**](#-features)
 
 </div>
+
+---
+
+## 🎉 What's New in v1.1.0
+
+- 🎨 **Enhanced UI components** with better accessibility
+- 🔧 **InitializationProvider** for better app startup management  
+- 📱 **LoadingScreen component** for smooth app initialization
+- 🌐 **Improved internationalization** support
+- 🔄 **Enhanced state management** with better error handling
+- 🐛 **Fixed text node rendering** issues in React Native components
+
+[**View Full Changelog**](./CHANGELOG.md) • [**GitHub Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.1.0)
 
 ---
 
@@ -63,11 +77,11 @@ A comprehensive React Native Expo boilerplate with **50+ modern UI components**,
 
 ```bash
 # Create new project using this template
-npx create-expo-app --template react-native-ui-boilerplate-template MyApp
+npx create-expo-app MyApp --template rnr-starter
 
-# Or clone directly
-git clone https://github.com/your-username/react-native-ui-boilerplate.git
-cd react-native-ui-boilerplate
+# Or clone directly  
+git clone https://github.com/uginy/rnr-starter.git
+cd rnr-starter
 bun install
 ```
 
@@ -432,6 +446,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [NativeWind](https://www.nativewind.dev/) - Tailwind CSS for React Native
 - [RN Primitives](https://github.com/mrzachnugent/react-native-reusables) - Unstyled, accessible components
 - [Shadcn/ui](https://ui.shadcn.com/) - Design inspiration and component patterns
+
+## 📋 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for a detailed history of changes.
+
+### Latest Updates (v1.1.0)
+- 🎨 Enhanced UI components with better accessibility
+- 🔧 Added InitializationProvider for better app startup
+- 📱 New LoadingScreen component
+- 🐛 Fixed text rendering issues in React Native
+- 🌐 Improved internationalization support
 
 ---
 
