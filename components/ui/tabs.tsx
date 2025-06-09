@@ -14,7 +14,7 @@ function TabsList({
   return (
     <TabsPrimitive.List
       className={cn(
-        'web:inline-flex h-10 native:h-12 items-center justify-center rounded-md bg-muted p-1 native:px-1.5',
+        'web:inline-flex flex-row h-10 native:h-12 items-center justify-center rounded-md bg-muted p-1 native:px-1.5',
         className
       )}
       {...props}
