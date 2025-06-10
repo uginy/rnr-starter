@@ -1,7 +1,7 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { AlertTriangle, Database, FileText, Shield } from 'lucide-react-native';
 import * as React from 'react';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import { ScrollView, View } from 'react-native';
 import { AuthDemoWidget } from '~/components/demo/AuthDemoWidget';
 import { ErrorHandlingWidget } from '~/components/demo/ErrorHandlingWidget';
@@ -21,7 +21,6 @@ iconWithClassName(FileText);
 iconWithClassName(AlertTriangle);
 
 export default function Screen() {
-  const { t } = useTranslation();
   const [activeTab, setActiveTab] = React.useState('query');
 
   return (
