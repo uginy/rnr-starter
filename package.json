@@ -54,7 +54,7 @@
     "check": "biome check .",
     "check:fix": "biome check --write .",
     "format:fix": "prettier --check --write ./",
-    "clean": "rimraf node_modules && rimraf yarn.lock && rimraf package-log.json && yarn install",
+    "clean": "rm -rf node_modules && rm -f yarn.lock && rm -f package-lock.json && bun install",
     "build:dev:android": "APP_ENV=development build --profile development --platform android",
     "build:dev:android:local": "APP_ENV=development eas build --profile development --platform android --local --output ~/projects/buildsMy/rnr-starter/dev.apk",
     "build:preview:android": "APP_ENV=preview eas build --profile preview --platform android",
