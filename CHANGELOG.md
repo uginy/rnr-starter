@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1] - 2025-06-14
+
+### Fixed
+- 📦 Package updates and maintenance
+- 🔧 Minor configuration improvements
+- 📚 Documentation updates
+
+## [1.2.0] - 2025-06-14
+
+### Added
+- 🔧 Enhanced project structure and configuration
+- 📦 Improved npm package configuration for better distribution
+- 🛠️ Updated dependencies to latest stable versions
+
+### Improved
+- 🚀 Better package optimization and build process
+- 📚 Enhanced documentation and setup guides
+- 🔧 Refined development workflow and tooling
+
+### Fixed
+- 🐛 Minor bug fixes and stability improvements
+- 📦 Package distribution optimizations
+
 ## [1.1.0] - 2025-06-09
 
 ### Added
