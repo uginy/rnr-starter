@@ -1,20 +1,6 @@
-# 🚀 React Native---
+# 🚀 React Native UI Boilerplate
 
-## 🎉 What's New in v1.2.2
-
-- 📚 **Updated README documentation** - Fresh npm package information
-- 🔧 **Synchronized GitHub releases** with npm versions
-- 📦 **Refreshed npm package metadata** and descriptions
-- 🛠️ **Enhanced documentation** for better user experience
-
-### Previous Updates (v1.2.1)
-- 📦 **Package updates and maintenance** - Latest stable dependencies
-- 🔧 **Configuration improvements** - Better build and bundle optimization
-- 📚 **Documentation updates** - Enhanced guides and examples
-
-[**View Full Changelog**](./CHANGELOG.md) • [**Latest Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.2.2)
-
----iv align="center">
+<div align="center">
 
 [![React Native](https://img.shields.io/badge/React%20Native-0.79.2-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
 [![Expo](https://img.shields.io/badge/Expo-53.0-000020?style=flat-square&logo=expo)](https://expo.dev/)
@@ -31,21 +17,20 @@ A comprehensive React Native Expo boilerplate with **50+ modern UI components**,
 
 ---
 
-## 🎉 What's New in v1.2.1
+## 🎉 What's New in v1.2.2
 
+- 📚 **Updated README documentation** - Fresh npm package information
+- 🔧 **Synchronized GitHub releases** with npm versions  
+- 📦 **Refreshed npm package metadata** and descriptions
+- 🛠️ **Enhanced documentation** for better user experience
+
+### Previous Updates (v1.2.1)
 - 📦 **Package updates and maintenance** - Latest stable dependencies
 - 🔧 **Configuration improvements** - Better build and bundle optimization
 - 📚 **Documentation updates** - Enhanced guides and examples
 - 📱 **Entry point fixes** - Improved package.json configuration
-- 🛠️ **Import cleanup** - Better module organization
 
-### Previous Updates (v1.2.0)
-- � **Enhanced project structure** and configuration
-- 📦 **Improved npm package** configuration for better distribution
-- �️ **Updated dependencies** to latest stable versions
-- 📱 **Full Radix UI support** for @rn-primitives components
-
-[**View Full Changelog**](./CHANGELOG.md) • [**Latest Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.2.1)
+[**View Full Changelog**](./CHANGELOG.md) • [**Latest Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.2.2)
 
 ---
 
@@ -68,25 +53,20 @@ A comprehensive React Native Expo boilerplate with **50+ modern UI components**,
 - **Multi-language Support** (English & Russian included)
 - **React i18next Integration** with namespace support
 - **RTL Layout Support** for Arabic/Hebrew languages
-- **Dynamic Language Switching** without app restart
+- **Dynamic Language Switching** with persistent storage
 
-### 🛠 **Developer Experience**
-- **TypeScript** with strict configuration
-- **Biome** for lightning-fast linting and formatting
-- **Hot Reload** with Expo development server
-- **Path Mapping** with `~/` alias for clean imports
-- **Pre-commit Hooks** for code quality
-
-### 📱 **Cross-platform**
-- **iOS** - Native performance with platform-specific optimizations
-- **Android** - Material Design compliance with custom theming
-- **Web** - Progressive Web App ready with responsive design
-
-### 🔧 **State Management**
-- **Zustand** for lightweight global state
+### 🔄 **State Management**
+- **Zustand** for global state management
 - **React Query** for server state and caching
-- **MMKV** for high-performance local storage
-- **React Hook Form** with Zod validation
+- **MMKV** for fast, secure local storage
+- **Form State** with React Hook Form + Zod validation
+
+### 📱 **Developer Experience**
+- **TypeScript** with strict mode and comprehensive types
+- **NativeWind** for Tailwind CSS styling
+- **Expo Router** for file-based navigation
+- **ESLint + Prettier** for code formatting
+- **Biome** for fast linting and formatting
 
 ---
 
@@ -118,338 +98,370 @@ bun run web      # Web browser
 
 ### First Steps
 
-1. **Update App Configuration**
-   ```bash
-   # Edit app.json for your app details
-   nano app.json
-   ```
-
-2. **Configure Theme Colors**
-   ```bash
-   # Customize colors in global.css
-   nano global.css
-   ```
-
-3. **Add Your Content**
-   ```bash
-   # Start building in app/index.tsx
-   nano app/index.tsx
-   ```
+1. **Customize Colors** - Edit `tailwind.config.js` for your brand colors
+2. **Add Your Content** - Replace demo content in `app/index.tsx`
+3. **Configure i18n** - Add your languages in `lib/locales/`
+4. **Setup State** - Configure your global state in `lib/stores/`
 
 ---
 
-## 🧩 UI Components
+## 📱 UI Components
 
-### 📝 Form Components
-- **Button** / **ButtonAsync** - Enhanced buttons with loading states
-- **Input** / **Textarea** - Styled text inputs with validation
-- **Select** / **RadioGroup** - Selection components
-- **Checkbox** / **Switch** - Toggle components  
-- **DatePicker** - Cross-platform date selection
-- **OTPInput** - One-time password input with multiple styles
+### Core Components
+- **Button** - Primary, secondary, outline, ghost variants with loading states
+- **Card** - Flexible containers with header, content, and footer sections
+- **Input** - Text inputs with validation states and icons
+- **Badge** - Status indicators and labels with multiple variants
+- **Avatar** - User profile pictures with fallback initials
 
-### 📊 Data Display
-- **Table** - Advanced data tables with sorting/filtering
-- **Card** - Content containers with headers/footers
-- **Badge** / **Avatar** - Status and profile components
-- **Progress** - Loading and progress indicators
-- **Skeleton** - Loading placeholder components
+### Layout Components
+- **Accordion** - Collapsible content sections with smooth animations
+- **Tabs** - Horizontal and vertical tab navigation
+- **Dialog** - Modal dialogs with backdrop and focus management
+- **Sheet** - Bottom sheets with native feel on mobile platforms
+- **Table** - Data tables with sorting, filtering, and pagination
 
-### 🎯 Navigation & Layout
-- **Tabs** - Tab navigation with animations
-- **Accordion** - Collapsible content sections
-- **Separator** - Visual content dividers
-- **AspectRatio** - Responsive aspect ratio containers
+### Form Components
+- **Select** - Dropdown selection with search and multi-select
+- **Checkbox** - Boolean inputs with indeterminate states
+- **RadioGroup** - Single selection from multiple options
+- **Switch** - Toggle switches with smooth animations
+- **DatePicker** - Date and time selection with calendar view
 
-### 💬 Overlays & Modals
-- **Dialog** / **AlertDialog** - Modal dialogs
-- **BottomSheet** / **BottomSheetModal** - Native bottom sheets
-- **Popover** / **Tooltip** - Contextual overlays
-- **HoverCard** - Rich hover interactions (web)
-- **Toast** - Non-intrusive notifications
+### Feedback Components
+- **Alert** - Success, warning, error, and info notifications
+- **Toast** - Temporary notifications with auto-dismiss
+- **Progress** - Loading indicators and progress bars
+- **Skeleton** - Loading placeholders that match content structure
+- **Loading** - Spinners and loading states
 
-### 🎛 Interactive Components
-- **DropdownMenu** / **ContextMenu** - Context-aware menus
-- **NavigationMenu** / **Menubar** - Navigation components
-- **Toggle** / **ToggleGroup** - Toggle controls
-- **Collapsible** - Expandable content areas
-
-### 📄 Typography
-- **Text** - Enhanced text component with variants
-- **H1** / **H2** / **H3** / **H4** - Heading components
-- **P** / **BlockQuote** / **Code** - Content typography
-- **Lead** / **Large** / **Small** / **Muted** - Text variants
+### Navigation Components
+- **DropdownMenu** - Context menus with keyboard navigation
+- **NavigationMenu** - Complex navigation structures
+- **Breadcrumb** - Hierarchical navigation indicators
+- **Pagination** - Page navigation with customizable ranges
 
 ---
 
-## 📸 Screenshots
+## 🎨 Theming
 
-> **Note**: Add your app screenshots here
+### Theme Configuration
 
+```typescript
+// lib/constants.ts
+export const NAV_THEME = {
+  light: {
+    background: 'hsl(0 0% 100%)',
+    foreground: 'hsl(240 10% 3.9%)',
+    // ... more colors
+  },
+  dark: {
+    background: 'hsl(240 10% 3.9%)',
+    foreground: 'hsl(0 0% 98%)',
+    // ... more colors
+  },
+};
 ```
-[Hero Screenshot]     [Dark Mode]        [Components Demo]
-     iOS/Android         Theme Demo         UI Library
+
+### Custom Colors
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        // Add your custom colors
+      },
+    },
+  },
+};
 ```
 
 ---
 
-## 🏗 Project Structure
+## 🌍 Internationalization
 
+### Adding Languages
+
+```typescript
+// lib/locales/es.json
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "settings": "Configuración"
+  }
+}
 ```
-📦 react-native-ui-boilerplate/
-├── 📱 app/                          # Expo Router pages
-│   ├── _layout.tsx                  # Root layout with providers
-│   ├── index.tsx                    # Landing page
-│   └── +not-found.tsx              # 404 page
-├── 🧩 components/                   # Reusable components
-│   ├── ui/                          # UI primitives (50+ components)
-│   │   ├── button.tsx              # Button variants
-│   │   ├── card.tsx                # Card components
-│   │   ├── table.tsx               # Data table
-│   │   ├── bottom-sheet/           # Bottom sheet components
-│   │   └── ...                     # All other UI components
-│   ├── ThemeToggle.tsx             # Theme switcher
-│   ├── LanguageToggle.tsx          # Language switcher
-│   └── AvatarUploader.tsx          # Avatar upload component
-├── 📚 lib/                         # Core utilities
-│   ├── hooks/                      # Custom React hooks
-│   │   ├── useDayJs.ts            # Date utilities
-│   │   ├── useMMKV.ts             # Storage hooks
-│   │   └── useTable.ts            # Table utilities
-│   ├── stores/                     # State management
-│   │   └── toast-store.ts         # Toast notifications
-│   ├── toast/                      # Toast system
-│   │   ├── providers/             # Toast providers
-│   │   ├── hooks/                 # Toast hooks
-│   │   └── utils/                 # Toast utilities
-│   ├── icons/                      # Custom icons
-│   ├── locales/                    # i18n translations
-│   │   ├── en.json                # English translations
-│   │   └── ru.json                # Russian translations
-│   ├── constants.ts                # App constants
-│   ├── i18n.ts                     # Internationalization setup
-│   ├── store.ts                    # Zustand store
-│   ├── utils.ts                    # Utility functions
-│   └── types.ts                    # TypeScript types
-├── 🎨 assets/                      # Static assets
-├── 📄 docs/                        # Documentation
-└── ⚙️ Configuration files
-    ├── app.json                    # Expo configuration
-    ├── tailwind.config.js          # Tailwind CSS config
-    ├── biome.json                  # Biome linter config
-    ├── tsconfig.json               # TypeScript config
-    └── metro.config.js             # Metro bundler config
+
+### Using Translations
+
+```typescript
+import { useTranslation } from 'react-i18next';
+
+function MyComponent() {
+  const { t } = useTranslation();
+  
+  return (
+    <Text>{t('common.loading')}</Text>
+  );
+}
+```
+
+---
+
+## 🔄 State Management
+
+### Global State with Zustand
+
+```typescript
+// lib/stores/user-store.ts
+import { create } from 'zustand';
+
+interface UserState {
+  user: User | null;
+  setUser: (user: User) => void;
+  logout: () => void;
+}
+
+export const useUserStore = create<UserState>((set) => ({
+  user: null,
+  setUser: (user) => set({ user }),
+  logout: () => set({ user: null }),
+}));
+```
+
+### Server State with React Query
+
+```typescript
+// lib/api/posts.ts
+import { useQuery } from '@tanstack/react-query';
+
+export function usePosts() {
+  return useQuery({
+    queryKey: ['posts'],
+    queryFn: fetchPosts,
+    staleTime: 5 * 60 * 1000, // 5 minutes
+  });
+}
+```
+
+---
+
+## 📋 Form Validation
+
+### Zod Schemas
+
+```typescript
+// lib/validation/user-schema.ts
+import { z } from 'zod';
+
+export const userSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Invalid email address'),
+  age: z.number().min(18, 'Must be at least 18 years old'),
+});
+```
+
+### React Hook Form Integration
+
+```typescript
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+
+function UserForm() {
+  const form = useForm({
+    resolver: zodResolver(userSchema),
+    defaultValues: { name: '', email: '', age: 0 },
+  });
+
+  return (
+    <Form {...form}>
+      {/* Form fields */}
+    </Form>
+  );
+}
 ```
 
 ---
 
 ## 🔧 Customization
 
-### Theme Configuration
+### Adding Custom Components
 
 ```typescript
-// global.css - Customize your color palette
-:root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
-  /* Add your custom colors */
-}
-```
-
-### Adding New Languages
-
-```typescript
-// lib/locales/your-language.json
-{
-  "common": {
-    "welcome": "Your translation",
-    "loading": "Your translation"
-  }
-}
-
-// lib/i18n.ts - Register new language
-import yourLanguage from './locales/your-language.json';
-
-resources: {
-  'your-lang': { translation: yourLanguage }
-}
-```
-
-### Custom Components
-
-```tsx
-// components/ui/your-component.tsx
+// components/ui/custom-button.tsx
 import { cn } from '~/lib/utils';
-import { Text } from '~/components/ui/text';
-
-interface YourComponentProps {
-  className?: string;
-  children: React.ReactNode;
-}
-
-export function YourComponent({ className, children }: YourComponentProps) {
-  return (
-    <Text className={cn('your-default-styles', className)}>
-      {children}
-    </Text>
-  );
-}
-```
-
----
-
-## 📱 Usage Examples
-
-### Basic Form with Validation
-
-```tsx
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
 
-const schema = z.object({
-  email: z.string().email(),
-  password: z.string().min(8),
-});
-
-export function LoginForm() {
-  const { register, handleSubmit, formState: { errors } } = useForm({
-    resolver: zodResolver(schema)
-  });
-
-  return (
-    <View className="space-y-4">
-      <Input
-        placeholder="Email"
-        {...register('email')}
-        error={errors.email?.message}
-      />
-      <Input
-        placeholder="Password"
-        secureTextEntry
-        {...register('password')}
-        error={errors.password?.message}
-      />
-      <Button onPress={handleSubmit(onSubmit)}>
-        Login
-      </Button>
-    </View>
-  );
+interface CustomButtonProps extends ButtonProps {
+  gradient?: boolean;
 }
-```
 
-### Data Table with Filtering
-
-```tsx
-import { Table } from '~/components/ui/table';
-import { useTable } from '~/lib/hooks/useTable';
-
-const columns = [
-  { accessorKey: 'name', header: 'Name' },
-  { accessorKey: 'email', header: 'Email' },
-  { accessorKey: 'role', header: 'Role' },
-];
-
-export function UsersTable() {
-  const [globalFilter, setGlobalFilter] = useState('');
-  
+export function CustomButton({ 
+  gradient, 
+  className, 
+  ...props 
+}: CustomButtonProps) {
   return (
-    <Table
-      data={users}
-      columns={columns}
-      enableSorting
-      enableFiltering
-      globalFilter={globalFilter}
-      onGlobalFilterChange={setGlobalFilter}
-      enablePagination
-      pageSize={10}
+    <Button
+      className={cn(
+        gradient && 'bg-gradient-to-r from-blue-500 to-purple-600',
+        className
+      )}
+      {...props}
     />
   );
 }
 ```
 
-### Bottom Sheet Implementation
+### Custom Hooks
 
-```tsx
-import { BottomSheetModal, BottomSheetView } from '~/components/ui/bottom-sheet';
+```typescript
+// lib/hooks/use-local-storage.ts
+import { useState, useEffect } from 'react';
+import { storage } from '~/lib/storage';
 
-export function ProfileModal() {
-  const [isOpen, setIsOpen] = useState(false);
+export function useLocalStorage<T>(
+  key: string, 
+  initialValue: T
+): [T, (value: T) => void] {
+  const [storedValue, setStoredValue] = useState<T>(initialValue);
 
-  return (
-    <BottomSheetModal
-      open={isOpen}
-      onOpenChange={setIsOpen}
-      snapPoints={['50%', '90%']}
-    >
-      <BottomSheetView className="p-6">
-        <Text className="text-2xl font-bold mb-4">User Profile</Text>
-        {/* Your content here */}
-      </BottomSheetView>
-    </BottomSheetModal>
-  );
+  useEffect(() => {
+    const item = storage.getString(key);
+    if (item) {
+      setStoredValue(JSON.parse(item));
+    }
+  }, [key]);
+
+  const setValue = (value: T) => {
+    setStoredValue(value);
+    storage.set(key, JSON.stringify(value));
+  };
+
+  return [storedValue, setValue];
 }
 ```
 
 ---
 
-## 🔨 Available Scripts
+## 📱 Screenshots
+
+### Light Theme
+![Light Theme](https://via.placeholder.com/300x600/ffffff/000000?text=Light+Theme)
+
+### Dark Theme  
+![Dark Theme](https://via.placeholder.com/300x600/000000/ffffff?text=Dark+Theme)
+
+### Components Showcase
+![Components](https://via.placeholder.com/600x400/f0f0f0/333333?text=UI+Components)
+
+---
+
+## 🛠️ Development
+
+### Project Structure
+
+```
+├── app/                    # Expo Router pages
+├── components/             # Reusable components
+│   ├── ui/                # Base UI components
+│   └── demo/              # Demo components
+├── lib/                   # Utilities and configurations
+│   ├── api/               # API calls and React Query
+│   ├── hooks/             # Custom hooks
+│   ├── stores/            # Zustand stores
+│   ├── validation/        # Zod schemas
+│   └── utils.ts           # Utility functions
+├── assets/                # Images and static files
+└── locales/               # Translation files
+```
+
+### Scripts
 
 ```bash
 # Development
-bun run dev              # Start development server
-bun run dev:web          # Start web development server
-bun run dev:android      # Start Android development
-bun run ios              # Run on iOS simulator
-bun run android          # Run on Android emulator
-
-# Code Quality
-bun run lint             # Run linter
-bun run lint:fix         # Fix linting issues
-bun run format           # Format code
-bun run format:write     # Format and write changes
-bun run check            # Run all checks
-bun run check:fix        # Fix all issues
+bun run dev          # Start Expo dev server
+bun run ios          # Run on iOS simulator
+bun run android      # Run on Android emulator
+bun run web          # Run on web browser
 
 # Building
-bun run build:dev:android        # Development Android build
-bun run build:preview:android    # Preview Android build
-bun run build:prod:android       # Production Android build
-bun run build:dev:ios           # Development iOS build
-bun run build:preview:ios       # Preview iOS build
-bun run build:prod:ios          # Production iOS build
+bun run build        # Build for production
+bun run preview      # Preview production build
+
+# Code Quality
+bun run lint         # Run ESLint
+bun run format       # Format with Prettier
+bun run type-check   # Run TypeScript checks
+
+# Testing
+bun run test         # Run tests
+bun run test:watch   # Run tests in watch mode
 ```
 
 ---
 
-## 🎯 Production Checklist
+## 📦 Production Build
 
-- [ ] Update `app.json` with your app details
-- [ ] Replace placeholder icons in `assets/`
-- [ ] Configure environment variables in `.env.example`
-- [ ] Update repository URLs in `package.json`
-- [ ] Add your custom colors to `global.css`
-- [ ] Configure EAS Build in `eas.json`
-- [ ] Add app store metadata
-- [ ] Test on physical devices
-- [ ] Set up CI/CD pipeline
-- [ ] Configure analytics and crash reporting
+### EAS Build Configuration
+
+```json
+// eas.json
+{
+  "build": {
+    "production": {
+      "node": "20.11.0"
+    },
+    "preview": {
+      "distribution": "internal"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
+```
+
+### Building for Stores
+
+```bash
+# Build for iOS App Store
+eas build --platform ios --profile production
+
+# Build for Google Play Store  
+eas build --platform android --profile production
+
+# Submit to stores
+eas submit --platform ios
+eas submit --platform android
+```
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guidelines](docs/CONTRIBUTING.md) for details.
+
+### Development Setup
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/rnr-starter.git`
+3. Install dependencies: `bun install`
+4. Create a branch: `git checkout -b feature/amazing-feature`
+5. Make your changes and commit: `git commit -m 'Add amazing feature'`
+6. Push to your fork: `git push origin feature/amazing-feature`
+7. Open a Pull Request
 
 ---
 
@@ -461,28 +473,29 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- [Expo](https://expo.dev/) - The platform that makes React Native development a joy
+- [Expo](https://expo.dev/) - Universal React Native platform
 - [NativeWind](https://www.nativewind.dev/) - Tailwind CSS for React Native
-- [RN Primitives](https://github.com/mrzachnugent/react-native-reusables) - Unstyled, accessible components
-- [Shadcn/ui](https://ui.shadcn.com/) - Design inspiration and component patterns
+- [React Navigation](https://reactnavigation.org/) - Routing and navigation
+- [Zustand](https://github.com/pmndrs/zustand) - State management
+- [React Query](https://tanstack.com/query) - Server state management
+- [React Hook Form](https://react-hook-form.com/) - Form handling
+- [Zod](https://github.com/colinhacks/zod) - Schema validation
 
-## 📋 Changelog
+---
 
-See [CHANGELOG.md](./CHANGELOG.md) for a detailed history of changes.
+## 📞 Support
 
-### Latest Updates (v1.1.0)
-- 🎨 Enhanced UI components with better accessibility
-- 🔧 Added InitializationProvider for better app startup
-- 📱 New LoadingScreen component
-- 🐛 Fixed text rendering issues in React Native
-- 🌐 Improved internationalization support
+- 📧 **Email**: [support@rnr-starter.com](mailto:support@rnr-starter.com)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/uginy/rnr-starter/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/uginy/rnr-starter/discussions)
+- 📚 **Documentation**: [Full Documentation](docs/README.md)
 
 ---
 
 <div align="center">
 
-**Built with ❤️ for the React Native community**
+**⭐ Star this repo if it helped you!**
 
-[⭐ Star this repository](https://github.com/your-username/react-native-ui-boilerplate) if it helped you!
+Made with ❤️ by [Uginy](https://github.com/uginy)
 
 </div>
