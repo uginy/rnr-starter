@@ -1,6 +1,20 @@
-# 🚀 React Native UI Boilerplate
+# 🚀 React Native---
 
-<div align="center">
+## 🎉 What's New in v1.2.2
+
+- 📚 **Updated README documentation** - Fresh npm package information
+- 🔧 **Synchronized GitHub releases** with npm versions
+- 📦 **Refreshed npm package metadata** and descriptions
+- 🛠️ **Enhanced documentation** for better user experience
+
+### Previous Updates (v1.2.1)
+- 📦 **Package updates and maintenance** - Latest stable dependencies
+- 🔧 **Configuration improvements** - Better build and bundle optimization
+- 📚 **Documentation updates** - Enhanced guides and examples
+
+[**View Full Changelog**](./CHANGELOG.md) • [**Latest Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.2.2)
+
+---iv align="center">
 
 [![React Native](https://img.shields.io/badge/React%20Native-0.79.2-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
 [![Expo](https://img.shields.io/badge/Expo-53.0-000020?style=flat-square&logo=expo)](https://expo.dev/)
