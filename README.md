@@ -17,16 +17,21 @@ A comprehensive React Native Expo boilerplate with **50+ modern UI components**,
 
 ---
 
-## 🎉 What's New in v1.1.0
+## 🎉 What's New in v1.2.1
 
-- 🎨 **Enhanced UI components** with better accessibility
-- 🔧 **InitializationProvider** for better app startup management  
-- 📱 **LoadingScreen component** for smooth app initialization
-- 🌐 **Improved internationalization** support
-- 🔄 **Enhanced state management** with better error handling
-- 🐛 **Fixed text node rendering** issues in React Native components
+- 📦 **Package updates and maintenance** - Latest stable dependencies
+- 🔧 **Configuration improvements** - Better build and bundle optimization
+- 📚 **Documentation updates** - Enhanced guides and examples
+- 📱 **Entry point fixes** - Improved package.json configuration
+- 🛠️ **Import cleanup** - Better module organization
 
-[**View Full Changelog**](./CHANGELOG.md) • [**GitHub Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.1.0)
+### Previous Updates (v1.2.0)
+- � **Enhanced project structure** and configuration
+- 📦 **Improved npm package** configuration for better distribution
+- �️ **Updated dependencies** to latest stable versions
+- 📱 **Full Radix UI support** for @rn-primitives components
+
+[**View Full Changelog**](./CHANGELOG.md) • [**Latest Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.2.1)
 
 ---
 
