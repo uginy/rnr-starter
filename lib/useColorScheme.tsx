@@ -7,21 +7,19 @@ export function useColorScheme() {
   const { setColorScheme: setNativewindColorScheme } = useNativewindColorScheme();
   const { theme, setTheme, isInitialized } = useAppStore();
 
-  // Sync with nativewind when store is initialized
+  // Синхронизируем NativeWind только после инициализации и при смене темы
   useEffect(() => {
     if (isInitialized) {
       setNativewindColorScheme(theme);
     }
   }, [theme, isInitialized, setNativewindColorScheme]);
 
-  // Enhanced setColorScheme that updates store and navigation bar
+  // Только один способ смены темы!
   const setColorSchemeWithStorage = (scheme: 'light' | 'dark') => {
     setTheme(scheme);
-    setNativewindColorScheme(scheme);
-    setAndroidNavigationBar(scheme);
+    // Не вызываем setNativewindColorScheme здесь!
   };
 
-  // Enhanced toggleColorScheme that saves to storage
   const toggleColorSchemeWithStorage = () => {
     const newScheme = theme === 'dark' ? 'light' : 'dark';
     setColorSchemeWithStorage(newScheme);

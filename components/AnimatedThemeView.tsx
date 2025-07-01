@@ -8,12 +8,14 @@ const themeColors = {
   dark: '#18181B', // тёмный фон
 };
 
+const ANIMATION_DURATION = 700;
+
 export const AnimatedThemeView: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { theme } = useAppStore();
   const bg = useSharedValue(themeColors[theme]);
 
   useEffect(() => {
-    bg.value = withTiming(themeColors[theme], { duration: 400 });
+    bg.value = withTiming(themeColors[theme], { duration: ANIMATION_DURATION });
   }, [theme]);
 
   const animatedStyle = useAnimatedStyle(() => ({

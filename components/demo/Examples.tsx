@@ -20,7 +20,7 @@ iconWithClassName(AlertTriangle);
 
 export function Examples() {
   const [activeTab, setActiveTab] = React.useState('query');
-  console.log(new Date().toISOString());
+
   return (
     <ScrollView className="flex-1 bg-secondary/30">
       <View className="flex-1 p-4 gap-6">
