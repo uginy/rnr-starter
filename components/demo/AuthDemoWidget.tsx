@@ -10,7 +10,6 @@ import { Label } from '~/components/ui/label';
 import { Text } from '~/components/ui/text';
 import { authApi } from '~/lib/api/auth-api';
 import type { AuthCredentials, User } from '~/lib/api/types';
-import { useStore } from '~/lib/store';
 import { toastService } from '~/lib/toast/toast-service';
 
 export function AuthDemoWidget() {

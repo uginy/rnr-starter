@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { useStore } from '~/lib/store';
+import { useErrorStore } from '~/lib/stores/error-store';
 import { useToast } from './use-toast';
 
 /**
  * Hook for automatically showing toast notifications for errors from the main store
  */
 export const useAutoErrors = () => {
-  const { error } = useStore();
+  const { error } = useErrorStore();
   const { errorI18n, error: showError } = useToast();
 
   useEffect(() => {
