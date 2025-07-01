@@ -58,7 +58,6 @@ A comprehensive React Native Expo boilerplate with **50+ modern UI components**,
 ### 🔄 **State Management**
 - **Zustand** for global state management
 - **React Query** for server state and caching
-- **MMKV** for fast, secure local storage
 - **Form State** with React Hook Form + Zod validation
 
 ### 📱 **Developer Experience**

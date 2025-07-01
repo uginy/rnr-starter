@@ -57,7 +57,6 @@ rm docs/biome-setup.md
 rm docs/bottom-sheet-guide.md
 rm docs/button-async-docs.md
 rm docs/maestro-setup.md
-rm docs/mmkv-integration.md
 rm docs/supabase-setup.md
 rm docs/toast-architecture.md
 ```

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
 import { LoadingScreen } from '~/components/ui/loading-screen';
 import { useAppStore } from '../stores/app-store';
 

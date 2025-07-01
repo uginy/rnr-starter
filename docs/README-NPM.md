@@ -89,7 +89,6 @@ npm run dev
 ### State Management
 - **Zustand** for global state
 - **React Query** for server state
-- **MMKV** for persistent storage
 
 ### Styling
 - **NativeWind** (Tailwind CSS for React Native)

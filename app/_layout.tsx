@@ -17,8 +17,10 @@ import { NAV_THEME } from '~/lib/constants';
 import { ToastProvider } from '~/lib/toast';
 import { useColorScheme } from '~/lib/useColorScheme';
 import '~/lib/i18n';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { AnimatedThemeView } from '~/components/AnimatedThemeView';
 import { InitializationProvider } from '~/lib/providers/InitializationProvider';
+import { storage } from '~/lib/storage-adapter';
+import { useAppStore } from '~/lib/stores/app-store';
 
 const LIGHT_THEME: Theme = {
   ...DefaultTheme,
@@ -45,6 +47,10 @@ export default function RootLayout() {
   const { isDarkColorScheme } = useColorScheme();
   const { t } = useTranslation();
 
+  React.useEffect(() => {
+    storage.init();
+  }, []);
+
   // Conditional provider wrapper for native platforms
   const ProviderWrapper =
     Platform.OS !== 'web'
@@ -58,7 +64,7 @@ export default function RootLayout() {
           <ProviderWrapper>
             <ToastProvider enableErrorInterceptor>
               <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-                <SafeAreaView style={{ flex: 1 }}>
+                <AnimatedThemeView>
                   <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
                   <Stack>
                     <Stack.Screen
@@ -75,7 +81,7 @@ export default function RootLayout() {
                       }}
                     />
                   </Stack>
-                </SafeAreaView>
+                </AnimatedThemeView>
                 <PortalHost />
               </ThemeProvider>
             </ToastProvider>

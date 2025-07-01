@@ -2,15 +2,16 @@ import { getLocales } from 'expo-localization';
 import { Platform } from 'react-native';
 import { create } from 'zustand';
 import i18n from '../i18n';
-import { STORAGE_KEYS, settingsStorage } from '../storage';
+import { storage } from '../storage-adapter';
+import { STORAGE_KEYS } from '../storage-keys';
 
 interface AppStore {
   isInitialized: boolean;
   theme: 'light' | 'dark';
   language: string;
   initializeApp: () => Promise<void>;
-  setTheme: (theme: 'light' | 'dark') => void;
-  setLanguage: (language: string) => void;
+  setTheme: (theme: 'light' | 'dark') => Promise<void>;
+  setLanguage: (language: string) => Promise<void>;
 }
 
 // Web storage fallback for language
@@ -34,12 +35,13 @@ export const useAppStore = create<AppStore>((set, get) => ({
 
   initializeApp: async () => {
     try {
-      // Synchronously load theme from MMKV
-      const savedTheme = settingsStorage.getString(STORAGE_KEYS.APP_THEME);
+      await storage.init();
+      // Load theme from storage
+      const savedTheme = await storage.getString(STORAGE_KEYS.APP_THEME);
       const theme =
         savedTheme && (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : 'dark';
 
-      // Synchronously load language
+      // Load language
       let language: string;
 
       if (Platform.OS === 'web') {
@@ -52,17 +54,18 @@ export const useAppStore = create<AppStore>((set, get) => ({
           language = deviceLocale === 'ru' ? 'ru' : 'en';
         }
       } else {
-        const savedLanguage = settingsStorage.getString(STORAGE_KEYS.APP_LANGUAGE);
+        const savedLanguage = await storage.getString(STORAGE_KEYS.APP_LANGUAGE);
         if (savedLanguage) {
           language = savedLanguage;
         } else {
           // Fall back to device locale for native
-          const deviceLocale = getLocales()[0]?.languageCode || 'en';
+          const locales = getLocales();
+          const deviceLocale = locales[0]?.languageCode || 'en';
           language = deviceLocale === 'ru' ? 'ru' : 'en';
         }
       }
 
-      // Set i18n language synchronously
+      // Set i18n language
       await i18n.changeLanguage(language);
 
       // Update store with loaded values
@@ -82,21 +85,23 @@ export const useAppStore = create<AppStore>((set, get) => ({
     }
   },
 
-  setTheme: (theme: 'light' | 'dark') => {
-    settingsStorage.setString(STORAGE_KEYS.APP_THEME, theme);
+  setTheme: async (theme: 'light' | 'dark') => {
+    await storage.init();
+    await storage.setString(STORAGE_KEYS.APP_THEME, theme);
     set({ theme });
   },
 
-  setLanguage: (language: string) => {
+  setLanguage: async (language: string) => {
+    await storage.init();
     // Save to storage
     if (Platform.OS === 'web') {
       setWebLanguage(language);
     } else {
-      settingsStorage.setString(STORAGE_KEYS.APP_LANGUAGE, language);
+      await storage.setString(STORAGE_KEYS.APP_LANGUAGE, language);
     }
 
     // Update i18n
-    i18n.changeLanguage(language);
+    await i18n.changeLanguage(language);
     set({ language });
   },
 }));

@@ -699,7 +699,6 @@ npm audit fix
 ### React Native 0.80 Upgrade
 - **Breaking**: Minimum Node.js version is now 18
 - **Breaking**: Removed deprecated AsyncStorage usage
-- **Migration**: Use MMKV for all storage needs
 
 ### Expo SDK 54 Upgrade
 - **Breaking**: New architecture enabled by default
