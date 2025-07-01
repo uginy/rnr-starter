@@ -17,6 +17,14 @@ A comprehensive React Native Expo boilerplate with **50+ modern UI components**,
 
 ---
 
+## 🎉 What's New in v1.3.2
+
+- ⚡️ Smoother theme switching animation (backgroundColor only, logic simplified)
+- 🧹 Removed all Russian comments from codebase
+- 🛠️ Automated linting and safe autofix with Biome
+- 🧩 Improved provider structure in layout
+- 🔥 Cleaned up unused code and dependencies (knip, biome)
+
 ## 🎉 What's New in v1.3.1
 
 - 📚 **Documentation Update** - Synchronized documentation across npm and GitHub
