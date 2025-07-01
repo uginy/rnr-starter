@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[![React Native](https://img.shields.io/badge/React%20Native-0.79.2-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
-[![Expo](https://img.shields.io/badge/Expo-53.0-000020?style=flat-square&logo=expo)](https://expo.dev/)
+[![React Native](https://img.shields.io/badge/React%20Native-0.79.4-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-53.0.15-000020?style=flat-square&logo=expo)](https://expo.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![NativeWind](https://img.shields.io/badge/NativeWind-4.1-06b6d4?style=flat-square)](https://www.nativewind.dev/)
 [![npm version](https://img.shields.io/npm/v/rnr-starter?style=flat-square&logo=npm)](https://www.npmjs.com/package/rnr-starter)
@@ -17,20 +17,18 @@ A comprehensive React Native Expo boilerplate with **50+ modern UI components**,
 
 ---
 
-## 🎉 What's New in v1.2.2
+## 🎉 What's New in v1.3.1
 
-- 📚 **Updated README documentation** - Fresh npm package information
-- 🔧 **Synchronized GitHub releases** with npm versions  
-- 📦 **Refreshed npm package metadata** and descriptions
-- 🛠️ **Enhanced documentation** for better user experience
+- 📚 **Documentation Update** - Synchronized documentation across npm and GitHub
+- 🔄 **Version Information** - Updated all version references
 
-### Previous Updates (v1.2.1)
-- 📦 **Package updates and maintenance** - Latest stable dependencies
-- 🔧 **Configuration improvements** - Better build and bundle optimization
-- 📚 **Documentation updates** - Enhanced guides and examples
-- 📱 **Entry point fixes** - Improved package.json configuration
+### Previous Updates (v1.3.0)
+- 🎨 **New Examples Component** - Better organized demo content with modular structure
+- 🔄 **Enhanced Error Handling** - New ErrorStore and comprehensive error handling demo
+- 📱 **Improved Architecture** - QueryClientProvider moved to _layout.tsx for better organization
+- ⬆️ **Major Updates** - Expo 53.0.15 and React Native 0.79.4
 
-[**View Full Changelog**](./CHANGELOG.md) • [**Latest Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.2.2)
+[**View Full Changelog**](./CHANGELOG.md) • [**Latest Release**](https://github.com/uginy/rnr-starter/releases/tag/v1.3.1)
 
 ---
 

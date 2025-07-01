@@ -2,6 +2,19 @@
 
 A comprehensive React Native Expo boilerplate with **50+ modern UI components**, dark/light themes, internationalization, and production-ready architecture.
 
+## 🎉 What's New in v1.3.1
+
+- 📚 **Documentation Update** - Synchronized documentation across npm and GitHub
+- 🔄 **Version Information** - Updated all version references
+
+### Previous Updates (v1.3.0)
+- 🎨 **New Examples Component** - Better organized demo content with modular structure
+- 🔄 **Enhanced Error Handling** - New ErrorStore and comprehensive error handling demo
+- 📱 **Improved Architecture** - QueryClientProvider moved to _layout.tsx for better organization
+- ⬆️ **Major Updates** - Expo 53.0.15 and React Native 0.79.4
+- 📚 **Better Documentation** - Enhanced guides and examples
+- 🛠️ **Code Organization** - Improved maintainability and structure
+
 ## 🚀 Quick Start
 
 ```bash

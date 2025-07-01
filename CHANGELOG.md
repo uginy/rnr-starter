@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.1] - 2025-06-18
+
+### Changed
+- 📚 Updated README files with latest version information
+- 🔄 Synchronized documentation across npm and GitHub
+
 ## [1.3.0] - 2025-06-18
 
 ### Added
@@ -22,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Improved
 - 🎯 Better error boundaries and error handling demonstration
 - 📚 Enhanced code organization and maintainability
-- 🔧 Simplified template cleanup process
+- 🔧 Simplified project structure
 
 ## [1.2.2] - 2025-06-17
 
