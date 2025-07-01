@@ -7,9 +7,8 @@ import { Button } from '~/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
 import { Text } from '~/components/ui/text';
 import { Check } from '~/lib/icons/Check';
-import { Info } from '~/lib/icons/Info';
 import { X } from '~/lib/icons/X';
-import { useStore } from '~/lib/store';
+import { useErrorStore } from '~/lib/stores/error-store';
 import { toastService } from '~/lib/toast/toast-service';
 
 // Mock error scenarios
@@ -26,7 +25,7 @@ type ErrorType = keyof typeof errorScenarios;
 
 export function ErrorHandlingWidget() {
   const queryClient = useQueryClient();
-  const { error: globalError, setError } = useStore();
+  const { error: globalError, setError, clearError } = useErrorStore();
   const [selectedError, setSelectedError] = useState<ErrorType>('network');
 
   // Query with error boundary
@@ -58,7 +57,7 @@ export function ErrorHandlingWidget() {
     mutationFn: (errorType: ErrorType) => errorScenarios[errorType](),
     onSuccess: (data) => {
       toastService.success('Operation completed successfully!');
-      setError(null);
+      clearError();
     },
     onError: (error) => {
       const message = error instanceof Error ? error.message : 'Unknown error occurred';
@@ -77,7 +76,7 @@ export function ErrorHandlingWidget() {
   };
 
   const handleClearErrors = () => {
-    setError(null);
+    clearError();
     queryClient.removeQueries({ queryKey: ['errorDemo'] });
     toastService.success('Errors cleared');
   };
@@ -200,103 +199,36 @@ export function ErrorHandlingWidget() {
 
           <Badge variant={errorMutation.isPending ? 'default' : 'outline'}>
             <Text className="text-xs">
-              {errorMutation.isPending ? 'Mutating...' : 'Mutation Idle'}
+              {errorMutation.isPending ? 'Mutation in Progress...' : 'Mutation Idle'}
             </Text>
           </Badge>
-
-          {isError && (
-            <Badge variant="destructive">
-              <Text className="text-xs">Query Error</Text>
-            </Badge>
-          )}
-
-          {errorMutation.error && (
-            <Badge variant="destructive">
-              <Text className="text-xs">Mutation Error</Text>
-            </Badge>
-          )}
-
-          {globalError && (
-            <Badge variant="destructive">
-              <Text className="text-xs">Global Error</Text>
-            </Badge>
-          )}
-
-          {failureCount > 0 && (
-            <Badge variant="secondary">
-              <Text className="text-xs">Retries: {failureCount}</Text>
-            </Badge>
-          )}
         </View>
 
-        {/* Error scenario selector */}
+        {/* Error scenario selection */}
         {renderErrorScenarios()}
 
         {/* Action buttons */}
         <View className="flex-row flex-wrap gap-2">
-          <Button
-            size="sm"
-            onPress={handleTriggerError}
-            disabled={isLoading || errorMutation.isPending}
-          >
-            <Text className="text-xs">Trigger Query</Text>
+          <Button onPress={handleTriggerError} disabled={isLoading}>
+            <Text className="text-xs">Trigger Query Error</Text>
           </Button>
 
-          <Button
-            size="sm"
-            variant="outline"
-            onPress={handleMutationError}
-            disabled={isLoading || errorMutation.isPending}
-          >
-            <Text className="text-xs">Trigger Mutation</Text>
+          <Button onPress={handleMutationError} disabled={errorMutation.isPending}>
+            <Text className="text-xs">Trigger Mutation Error</Text>
           </Button>
 
-          <Button
-            size="sm"
-            variant="outline"
-            onPress={handleGlobalError}
-            disabled={isLoading || errorMutation.isPending}
-          >
+          <Button onPress={handleGlobalError} variant="destructive">
             <Text className="text-xs">Set Global Error</Text>
           </Button>
 
-          <Button size="sm" variant="secondary" onPress={handleClearErrors}>
+          <Button onPress={handleClearErrors} variant="outline">
             <Text className="text-xs">Clear All Errors</Text>
           </Button>
         </View>
 
-        {/* Error display */}
+        {/* Error and success information */}
         {renderErrorInfo()}
-
-        {/* Success display */}
         {renderSuccessInfo()}
-
-        {/* Error handling features info */}
-        <View className="bg-muted/50 p-3 rounded-lg">
-          <Text className="font-medium text-sm mb-2">Error Handling Features:</Text>
-          <View className="space-y-1">
-            <Text className="text-xs">• Automatic retry with exponential backoff</Text>
-            <Text className="text-xs">• Toast notifications for user feedback</Text>
-            <Text className="text-xs">• Global error state management with Zustand</Text>
-            <Text className="text-xs">• Query-specific error boundaries</Text>
-            <Text className="text-xs">• Mutation error handling</Text>
-            <Text className="text-xs">• Custom retry logic and failure counting</Text>
-          </View>
-        </View>
-
-        {/* Debug info */}
-        {(isError || errorMutation.error || globalError) && (
-          <View className="bg-muted/30 p-3 rounded-lg">
-            <Text className="font-medium text-xs mb-2">Debug Information:</Text>
-            <View className="space-y-1">
-              <Text className="text-xs">Query Error: {isError ? 'Yes' : 'No'}</Text>
-              <Text className="text-xs">Mutation Error: {errorMutation.error ? 'Yes' : 'No'}</Text>
-              <Text className="text-xs">Global Error: {globalError ? 'Yes' : 'No'}</Text>
-              <Text className="text-xs">Failure Count: {failureCount}</Text>
-              <Text className="text-xs">Selected Scenario: {selectedError}</Text>
-            </View>
-          </View>
-        )}
       </CardContent>
     </Card>
   );

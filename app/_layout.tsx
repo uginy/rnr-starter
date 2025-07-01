@@ -2,6 +2,7 @@ import '~/global.css';
 
 import { DarkTheme, DefaultTheme, Theme, ThemeProvider } from '@react-navigation/native';
 import { PortalHost } from '@rn-primitives/portal';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
@@ -11,6 +12,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { LanguageToggle } from '~/components/LanguageToggle';
 import { ThemeToggle } from '~/components/ThemeToggle';
 import { setAndroidNavigationBar } from '~/lib/android-navigation-bar';
+import { queryClient } from '~/lib/api/query-client';
 import { NAV_THEME } from '~/lib/constants';
 import { ToastProvider } from '~/lib/toast';
 import { useColorScheme } from '~/lib/useColorScheme';
@@ -50,35 +52,37 @@ export default function RootLayout() {
       : React.Fragment;
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <InitializationProvider>
-        <ProviderWrapper>
-          <ToastProvider enableErrorInterceptor>
-            <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-              <SafeAreaView style={{ flex: 1 }}>
-                <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
-                <Stack>
-                  <Stack.Screen
-                    name="index"
-                    options={{
-                      headerShown: true,
-                      title: t('navigation.title'),
-                      headerRight: () => (
-                        <View className="gap-4 flex flex-row">
-                          <LanguageToggle />
-                          <ThemeToggle />
-                        </View>
-                      ),
-                    }}
-                  />
-                </Stack>
-              </SafeAreaView>
-              <PortalHost />
-            </ThemeProvider>
-          </ToastProvider>
-        </ProviderWrapper>
-      </InitializationProvider>
-    </GestureHandlerRootView>
+    <QueryClientProvider client={queryClient}>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <InitializationProvider>
+          <ProviderWrapper>
+            <ToastProvider enableErrorInterceptor>
+              <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+                <SafeAreaView style={{ flex: 1 }}>
+                  <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
+                  <Stack>
+                    <Stack.Screen
+                      name="index"
+                      options={{
+                        headerShown: true,
+                        title: t('navigation.title'),
+                        headerRight: () => (
+                          <View className="gap-4 flex flex-row">
+                            <LanguageToggle />
+                            <ThemeToggle />
+                          </View>
+                        ),
+                      }}
+                    />
+                  </Stack>
+                </SafeAreaView>
+                <PortalHost />
+              </ThemeProvider>
+            </ToastProvider>
+          </ProviderWrapper>
+        </InitializationProvider>
+      </GestureHandlerRootView>
+    </QueryClientProvider>
   );
 }
 
