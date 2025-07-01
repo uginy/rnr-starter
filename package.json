@@ -1,7 +1,7 @@
 {
   "name": "rnr-starter",
   "main": "index",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "description": "A comprehensive React Native Expo boilerplate with 50+ modern UI components, dark/light themes, i18n, state management, and production-ready architecture",
   "keywords": [
     "react-native",
