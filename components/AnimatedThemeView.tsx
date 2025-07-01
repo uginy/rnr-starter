@@ -4,8 +4,8 @@ import Animated, { useSharedValue, useAnimatedStyle, withTiming } from 'react-na
 import { useAppStore } from '~/lib/stores/app-store';
 
 const themeColors = {
-  light: '#F8FAFC', // светлый фон
-  dark: '#18181B', // тёмный фон
+  light: '#F8FAFC',
+  dark: '#18181B',
 };
 
 const ANIMATION_DURATION = 700;

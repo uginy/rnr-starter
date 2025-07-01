@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('node:fs');
+const path = require('node:path');
+const { execSync } = require('node:child_process');
 
 /**
  * Script for creating a new project from React Native UI Boilerplate template
@@ -230,7 +230,7 @@ Please choose a different target directory.`
     await this.initGitRepo(targetDir);
 
     console.log('✅ Project created successfully!');
-    console.log(`\n📍 Next steps:`);
+    console.log('\n📍 Next steps:');
     console.log(`   cd ${projectName}`);
     if (skipInstall) {
       console.log('   bun install');

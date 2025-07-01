@@ -44,10 +44,9 @@ export class UniversalStorage {
     if (this.type === 'secure') {
       const v = await this.secureStore.getItemAsync(key);
       return v ?? defaultValue;
-    } else {
-      const v = await this.asyncStorage.getItem(key);
-      return v ?? defaultValue;
     }
+    const v = await this.asyncStorage.getItem(key);
+    return v ?? defaultValue;
   }
 
   async setNumber(key: string, value: number) {
@@ -89,10 +88,9 @@ export class UniversalStorage {
     if (this.type === 'secure') {
       const v = await this.secureStore.getItemAsync(key);
       return v !== null && v !== undefined;
-    } else {
-      const v = await this.asyncStorage.getItem(key);
-      return v !== null;
     }
+    const v = await this.asyncStorage.getItem(key);
+    return v !== null;
   }
 
   async delete(key: string) {
